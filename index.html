@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Card-game</title>
+</head>
+<body>
+	<h1 class="title">Remember me</h1>
+	<div class="container">
+		<div class="card" onclick="openCard(0)"></div>
+		<div class="card" onclick="openCard(1)"></div>
+		<div class="card" onclick="openCard(2)"></div>
+		<div class="card" onclick="openCard(3)"></div>
+		<div class="card" onclick="openCard(4)"></div>
+		<div class="card" onclick="openCard(5)"></div>
+		<div class="card" onclick="openCard(6)"></div>
+		<div class="card" onclick="openCard(7)"></div>
+		<div class="card" onclick="openCard(8)"></div>
+		<div class="card" onclick="openCard(9)"></div>
+		<div class="card" onclick="openCard(10)"></div>
+		<div class="card" onclick="openCard(11)"></div>
+		<div class="card" onclick="openCard(12)"></div>
+		<div class="card" onclick="openCard(13)"></div>
+		<div class="card" onclick="openCard(14)"></div>
+		<div class="card" onclick="openCard(15)"></div>
+		<div class="loss">
+			<h2 class="title">You Lose(</h2>
+			<button class="restart" onclick="window.location.reload()">Restart</button>
+			<div class="score">You score: <span class="ball"></span>/16</div>
+		</div>
+		<div class="winn">
+			<h2 class="title">You Win !)</h2>
+			<button class="restart" onclick="window.location.reload()">Restart</button>
+		</div>
+	</div>
+	<button class="play" onclick="play()">Level <strong>0</strong></button>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
