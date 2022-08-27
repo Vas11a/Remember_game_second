@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    background: linear-gradient(to top, #FF4744 10%, #DDFF34 50%, #FFB120 80%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 4px;
+    width: 480px;
+    height: 480px;
+    margin: 0 auto;
+    box-shadow: 20px 20px 20px black;
+}
+
+.card {
+    border: 1px solid black;
+    background-color: grey;
+    cursor: pointer;
+    transition-duration: 1s;
+    position: relative;
+}
+
+.red {
+    background-color: red;
+    transform: rotateY(180deg);
+}
+
+.green {
+    background-color: green;
+    transform: rotateY(180deg);
+}
+
+.play {
+    padding: 10px;
+    outline: 0;
+    border: 4px solid #FFB120;
+    /*border-radius: 30px;*/
+    margin-top: 40px;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: #FF4744;
+    transition-duration: .3s;
+    width: 160px;
+    margin-left: calc(50% - 80px);
+}
+
+.play:hover {
+    box-shadow: 3px 3px 5px;
+}
+
+.play:active {
+    box-shadow: 0 0 0;
+    background-color: #FFB120;
+}
+
+.title {
+    text-align: center;
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow: 1px 1px 4px grey;
+}
+
+.loss,
+.winn {
+    position: absolute;
+    border: 3px solid black;
+    width: 400px;
+    min-height: 150px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF5B58;
+    left: calc(50% - 200px);
+    top: 200px;
+    border-radius: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 1s;
+}
+
+.winn {
+    background-color: #64FF30;
+}
+
+.restart {
+    width: 100px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.score,
+span {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.add {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media screen and (max-width: 530px) {
+    .container {
+        width: 400px;
+        height: 400px;
+    }
+
+    .loss,
+    .winn {
+        width: 340px;
+        left: calc(50% - 170px);
+    }
+
+}
+
+@media screen and (max-width: 440px) {
+    .container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .loss,
+    .winn {
+        width: 280px;
+        left: calc(50% - 140px);
+        top: 150px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .play {
+        margin-top: 30px;
+    }
+
+}
+
+
+@media screen and (max-width: 340px) {
+    .container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .loss,
+    .winn {
+        width: 260px;
+        left: calc(50% - 130px);
+        top: 100px;
+    }
+
+
+    .play {
+        margin-top: 30px;
+    }
+
+}
+
+@media screen and (max-height: 675px) {
+    .container {
+        width: 400px;
+        height: 400px;
+    }
+
+    .loss,
+    .winn {
+        width: 340px;
+        left: calc(50% - 170px);
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .loss,
+    .winn {
+        width: 280px;
+        left: calc(50% - 140px);
+        top: 150px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .play {
+        margin-top: 30px;
+    }
+
+}
+
+
+@media screen and (max-height: 470px) {
+    .container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .loss,
+    .winn {
+        width: 260px;
+        left: calc(50% - 130px);
+        top: 100px;
+    }
+
+
+    .play {
+        margin-top: 30px;
+    }
+
+}
